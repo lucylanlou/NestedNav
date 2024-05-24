@@ -2,8 +2,9 @@ import { diploma, certificate } from "../assets";
 
 export const navigation = [
   {
-    id: "design",
-    title: "Design",
+    id: "figma",
+    title: "Figma",
+    url:"https://www.figma.com/design/lXRjjT7VqI4KWBOP5FGlOC/Untitled?node-id=0%3A1&t=oRlotXX9NNua6UqT-1"
   },
   {
     id: "education",
