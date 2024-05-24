@@ -10,6 +10,21 @@ const Navbar: React.FC = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setToggle(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <nav
       className={
@@ -51,7 +66,11 @@ const Navbar: React.FC = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d={toggle ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+              d={
+                toggle
+                  ? "M6 18L18 6M6 6l12 12" // Close (X) icon
+                  : "M4 6h16M4 12h16M4 18h16" // menu
+              }
             />
           </svg>
 

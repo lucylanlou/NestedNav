@@ -12,6 +12,7 @@ module.exports = {
         "black-100": "#4A261F",
         "black-200": "#090325",
         "white-100": "#FFF8FC",
+        "white-200": "#FEF8FF",
         transparent: "transparent",
       },
       boxShadow: {

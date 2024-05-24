@@ -20,7 +20,7 @@ const VerticleNavbar: React.FC = () => {
 
   return (
     <div
-      className={`absolute group top-full z-10 bg-white rounded-b-lg shadow-md flex flex-row bg-opacity-[50%] border-secondary border-opacity-[30%] border-t left-[0px] max-w-screen 
+      className={`absolute group top-full z-10 bg-white-200 rounded-b-lg shadow-md flex flex-row border-secondary border-opacity-[30%] border-t left-[0px] max-w-screen 
         
     }`}
       onMouseLeave={handleMouseLeave}
