@@ -23,8 +23,8 @@ const NestedNestedContentNavItem: React.FC<NestedNestedContentNavItemProps> = ({
     <Link
       key={id}
       to={url}
-      className={`hover:underline flex flex-col text-sm text-black-100 px-2   ${
-        size === "long" ? "w-full pb-4" : "lg:w-[50%] lg:pb-2 w-full pb-4" // screen less than lg treat all elements as long
+      className={`hover:underline flex flex-col text-sm text-black-100 px-2 pb-4  ${
+        size === "long" ? "w-full " : "lg:w-[50%] w-full " // screen less than lg treat all elements as long
       }`}
     >
       <span className="font-semibold ">{title}</span>

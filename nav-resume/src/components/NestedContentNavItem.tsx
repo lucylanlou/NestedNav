@@ -27,17 +27,19 @@ const NestedContentNavItem: React.FC<NestedNavItemProps> = ({
       {url ? (
         <Link
           to={url}
-          className={`w-72 inline-flex items-center justify-center h-full text-black-100 border-secondary transition-all duration-200 p-6 ${
+          className={`w-72 inline-flex items-center justify-between h-full text-black-100 border-secondary transition-all duration-200 p-6 ${
             focussed ? "font-semibold " : ""
           }  ${focussed && nested ? "border-r-2 " : ""}`}
         >
-          {icon && <img src={icon} alt={title} className="w-7 h-7 mr-2" />}
-          <span className="w-full">
-            {title}
-            <span className="absolute left-0 font-semibold invisible">
+          <div className="flex">
+            {icon && <img src={icon} alt={title} className="w-7 h-7 mr-2" />}
+            <span className="w-full">
               {title}
+              <span className="absolute left-0 font-semibold invisible">
+                {title}
+              </span>
             </span>
-          </span>
+          </div>
         </Link>
       ) : (
         <div
@@ -45,13 +47,15 @@ const NestedContentNavItem: React.FC<NestedNavItemProps> = ({
             focussed ? "font-semibold " : ""
           }  ${focussed && nested ? "border-r-2 " : ""}`}
         >
-          {icon && <img src={icon} alt={title} className="w-7 h-7 mr-4" />}
-          <span className="relative">
-            {title}
-            <span className="absolute left-0 font-semibold invisible">
+          <div className="flex">
+            {icon && <img src={icon} alt={title} className="w-7 h-7 mr-4" />}
+            <span className="relative">
               {title}
+              <span className="absolute left-0 font-semibold invisible">
+                {title}
+              </span>
             </span>
-          </span>
+          </div>
           {nested && (
             <svg
               className={`ml-2 transition-transform transform fill-secondary -rotate-90`}

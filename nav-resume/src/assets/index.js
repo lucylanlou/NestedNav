@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import cat from "./cat.svg";
 
 import diploma from "./education/diploma.svg";
 import certificate from "./education/certificate.svg";
@@ -32,10 +33,10 @@ import certificate from "./education/certificate.svg";
 // import typescript from "./tech/typescript.png";
 // import threejs from "./tech/threejs.svg";
 
-// import ethicable from "./company/ethicable.png";
-// import thermofisher from "./company/thermofisher.png";
-// import csm from "./company/csm.png";
-// import mesabiotech from "./company/mesabiotech.png";
+import ethicable from "./company/ethicable.png";
+import thermofisher from "./company/thermofisher.png";
+import csm from "./company/csm.png";
+import mesabiotech from "./company/mesabiotech.png";
 
 // import tinytales from "./tinytales.png";
 // import gymhaus from "./gymhaus.png";
@@ -44,6 +45,7 @@ import certificate from "./education/certificate.svg";
 
 export {
   logo,
+  cat,
   diploma,
   certificate,
   // reactNative,
@@ -76,10 +78,10 @@ export {
   // java,
   // typescript,
   // threejs,
-  // ethicable,
-  // thermofisher,
-  // csm,
-  // mesabiotech,
+  ethicable,
+  thermofisher,
+  csm,
+  mesabiotech,
   // tinytales,
   // gymhaus,
   // kingpin,
