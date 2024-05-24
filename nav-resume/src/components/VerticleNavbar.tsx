@@ -10,21 +10,25 @@ const VerticleNavbar: React.FC = () => {
     null
   );
 
+  const handleMouseEnter = (item: VerticleNavItem) => {
+    setFocussedItem(item);
+  };
+
+  const handleMouseLeave = () => {
+    setFocussedItem(null);
+  };
+
   return (
     <div
-      className={`absolute group top-full z-10 bg-white rounded-b-lg shadow-md group-hover:flex flex-row bg-opacity-[50%] border-secondary border-opacity-[30%] border-t left-[8px]
-      }`}
+      className={`absolute group top-full z-10 bg-white rounded-b-lg shadow-md flex flex-row bg-opacity-[50%] border-secondary border-opacity-[30%] border-t left-[0px] max-w-screen 
+        
+    }`}
+      onMouseLeave={handleMouseLeave}
     >
-      <div>
+      <div className="sm:w-48 ">
         <ul>
           {navigation.map((item) => (
-            <li
-              key={item.id}
-              onMouseEnter={() => setFocussedItem(item)}
-              onMouseLeave={() => {
-                setFocussedItem(null);
-              }}
-            >
+            <li key={item.id} onMouseEnter={() => handleMouseEnter(item)}>
               <VerticleNavbarItem
                 content={item}
                 focussed={focussedItem === item}
@@ -34,7 +38,12 @@ const VerticleNavbar: React.FC = () => {
         </ul>
       </div>
       {focussedItem && focussedItem.nested && (
-        <NestedContent content={focussedItem.nested} />
+        <div
+          onMouseEnter={() => handleMouseEnter(focussedItem)}
+          className="flex grow justify-stretch justify-items-stretch justify-self-stretch content-stretch items-stretch self-stretch"
+        >
+          <NestedContent content={focussedItem.nested} />
+        </div>
       )}
     </div>
   );

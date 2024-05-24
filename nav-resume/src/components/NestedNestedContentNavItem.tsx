@@ -13,7 +13,6 @@ interface NestedNestedContentNavItemProps {
   content: NestedNestedNavItem;
   size: string;
 }
-
 const NestedNestedContentNavItem: React.FC<NestedNestedContentNavItemProps> = ({
   content,
   size = "short",
@@ -24,8 +23,8 @@ const NestedNestedContentNavItem: React.FC<NestedNestedContentNavItemProps> = ({
     <Link
       key={id}
       to={url}
-      className={`hover:underline flex flex-col text-sm text-black-100 px-2 pb-2  ${
-        size === "long" ? "w-full" : "w-[50%]"
+      className={`hover:underline flex flex-col text-sm text-black-100 px-2   ${
+        size === "long" ? "w-full pb-4" : "lg:w-[50%] lg:pb-2 w-full pb-4" // screen less than lg treat all elements as long
       }`}
     >
       <span className="font-semibold ">{title}</span>

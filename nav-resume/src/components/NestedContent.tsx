@@ -15,7 +15,7 @@ const NestedContent: React.FC<NestedContentProps> = ({ content }) => {
 
   return (
     <div
-      className={`group lg:absolute lg:top-full z-10 lg:hidden bg-white rounded-b-lg shadow-md group-hover:flex max-w-screen bg-opacity-[50%] border-secondary border-opacity-[30%] border-t lg:left-[-50%] xl:left-[-16px] 2xl:left-[-8px]
+      className={`relative lg:absolute lg:top-full z-10 lg:hidden bg-white lg:rounded-b-lg lg:shadow-md group-hover:flex max-w-screen bg-opacity-[50%] border-secondary border-opacity-[30%] border-l lg:border-l-0 lg:border-t lg:left-[-50%] xl:left-[-16px] 2xl:left-[-8px]
       }`}
     >
       <div>

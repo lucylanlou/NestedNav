@@ -25,7 +25,7 @@ const VerticleNavbarItem: React.FC<NestedNavItemProps> = ({
       {url ? (
         <Link
           to={url}
-          className={`w-48 inline-flex items-center justify-center h-full text-black-100 border-secondary transition-all duration-200 p-6 ${
+          className={`w-full md:w-48  inline-flex items-center justify-center h-full text-black-100 border-secondary transition-all duration-200 p-6 ${
             focussed ? "font-semibold " : ""
           }  ${focussed && nested ? "border-r-2 " : ""}`}
         >
@@ -38,7 +38,7 @@ const VerticleNavbarItem: React.FC<NestedNavItemProps> = ({
         </Link>
       ) : (
         <div
-          className={`w-48 inline-flex items-center justify-between h-full text-black-100 border-secondary transition-all duration-200 p-6 ${
+          className={`w-full md:w-48  inline-flex items-center justify-between h-full text-black-100 border-secondary transition-all duration-200 p-6 ${
             focussed ? "font-semibold " : ""
           }  ${focussed && nested ? "border-r-2 " : ""}`}
         >
